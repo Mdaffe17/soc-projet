@@ -1,0 +1,7 @@
+# Wazuh certificates
+wazuh/single-node/wazuh-certificates
+wazuh/single-node/wazuh-certificates/*
+
+# Logs
+*.log
+
