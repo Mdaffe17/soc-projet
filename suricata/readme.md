@@ -46,7 +46,7 @@ https://www.openinfosecfoundation.org/download/
 "C:\Program Files\Suricata\suricata.exe" -i -v
 ```
 
-3. Remplacer le fichier de configuration par celui fourni ici (suricata.yaml) et dans ce même fichier suricata.yaml remplacé interface : eth0 par l'ID trouvé avec la commande précédente. Ex si ID trouvé égal 5, alors on fait interface : 5
+4. Remplacer le fichier de configuration par celui fourni ici (suricata.yaml) et dans ce même fichier suricata.yaml remplacé interface : eth0 par l'ID trouvé avec la commande précédente. Ex si ID trouvé égal 5, alors on fait interface : 5
 
 Emplacement
 
@@ -54,9 +54,11 @@ Emplacement
 C:\ProgramData\Suricata\suricata.yaml
 ```
 
-4. Démarrer Suricata sur l’interface visible de Windows (ex. Ethernet, Wi-Fi)
-   suricata.exe -c suricata.yaml
+5. Démarrer Suricata sur l’interface visible de Windows (ex. Ethernet, Wi-Fi)
 
+```Powershell  
+ suricata.exe -c suricata.yaml
+```
 ---
 
 ## MacOS
@@ -75,13 +77,13 @@ brew install suricata
 
 3. Remplacer le fichier de configuration par celui fourni ici (suricata.yaml) et dans ce même fihcier remplacé l'interface réseau trouvé avec la commande ifconfig. Ex : interface : en0
 
--Pour les mac ARM
+-Emplacement pour les mac ARM
 
 ```zsh
 /opt/homebrew/etc/suricata/suricata.yaml
 ```
 
--Pour les macs Intel
+-Emplacement pour les macs Intel
 
 ```zsh
 /usr/local/etc/suricata/suricata.yaml
