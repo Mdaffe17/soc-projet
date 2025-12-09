@@ -2,6 +2,38 @@
 wazuh/single-node/wazuh-certificates
 wazuh/single-node/wazuh-certificates/*
 
+# Wazuh logs and data
+wazuh/logs/
+wazuh/data/
+wazuh/backups/
+
 # Logs
 *.log
 
+# Logs
+suricata/logs/
+suricata/logs/*
+*.log
+
+# Suricata cache
+suricata/cache/
+suricata/*.pid
+
+# Suricata dynamic rules (auto-downloaded)
+suricata/rules/
+suricata/rules/*
+
+# Docker volumes
+docker-volumes/
+*/docker-data/
+*/data/
+
+# SYSTEM FILES
+
+.DS_Store
+
+
+*.crt
+*.key
+*.pem
+*.csr

@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  suricata:
+    image: jasonish/suricata:latest
+    container_name: suricata
+    network_mode: host        # Accès direct au réseau hôte → sniffing temps réel
+    privileged: true          # Nécessaire pour lire les paquets réseaux
+    command: >
+      -i eth0
+      -v
+    volumes:
+      - ./logs:/var/log/suricata
+    restart: unless-stopped
+

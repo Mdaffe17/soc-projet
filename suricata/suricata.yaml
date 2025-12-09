@@ -1,0 +1,38 @@
+vars:
+  address-groups:
+    HOME_NET: "any"
+    EXTERNAL_NET: "!HOME_NET"
+
+default-log-dir: /var/log/suricata
+
+logging:
+  default-log-level: info
+
+af-packet:
+  - interface: eth0
+    cluster-id: 99
+    cluster-type: cluster_flow
+    defrag: yes
+    use-mmap: yes
+    ring-size: 2048
+
+outputs:
+  - eve-log:
+      enabled: yes
+      filetype: regular
+      filename: eve.json
+      community-id: yes
+      types:
+        - alert
+        - anomaly
+        - dns
+        - http
+        - tls
+        - flow
+        - ssh
+        - stats
+
+include: /var/lib/suricata/rules/suricata.rules
+
+ 
+
